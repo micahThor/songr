@@ -2,15 +2,15 @@
 <!-- Short summary or background information -->
 ### Create an application that uses **Spring Framework**.  
 
-### Project dependencies include *tThymeleaf*, *Spring Web*, and *Spring Devtools*.  
+Project dependencies include *Thymeleaf*, *Spring Web*, and *Spring Devtools*.  
 
-### This project contains these **routes**:  
+#### This project contains these **routes**:  
     - "/" : Home route.  Displays a welcome message.  
     - "/hello" : Displays another welcome message.
     - "/capitalize" : Displays param in URL in body of HTML as a capitalized word.
     - "/albums: "Displays three Album objects in body of HTML" 
     
-### How to **run** Songr:
+#### How to **run** Songr:
   1. Clone this repo.
   2. Navigate terminal to repo folder location on local machine.
   3. Enter *"./gradlew BootRun"*
