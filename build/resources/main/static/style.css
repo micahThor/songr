@@ -1,0 +1,21 @@
+body {
+    background-color: aliceblue;
+}
+
+#albums {
+    text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+    font-family: 'Bangers', cursive;
+    text-align: center;
+}
+
+p {
+    font-family: 'Bangers', cursive;
+}
+
