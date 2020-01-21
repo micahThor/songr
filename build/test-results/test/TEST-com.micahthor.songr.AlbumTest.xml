@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.micahthor.songr.AlbumTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-01-21T18:47:23" hostname="38f9d36a23ef.ant.amazon.com" time="0.04">
+  <properties/>
+  <testcase name="testAlbum_Artist()" classname="com.micahthor.songr.AlbumTest" time="0.022"/>
+  <testcase name="testAlbum_SongCount()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
+  <testcase name="testAlbum_Title()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
+  <testcase name="testAlbum_ImgURLString()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
+  <testcase name="testAlbum_SongLength()" classname="com.micahthor.songr.AlbumTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
