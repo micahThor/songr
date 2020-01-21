@@ -5,17 +5,17 @@
 Project dependencies include *Thymeleaf*, *Spring Web*, and *Spring Devtools*.  
 
 #### This project contains these **routes**:  
-    - "/" : Home route.  Displays a welcome message.  
-    - "/hello" : Displays another welcome message.
-    - "/capitalize" : Displays param in URL in body of HTML as a capitalized word.
-    - "/albums: "Displays three Album objects in body of HTML" 
+    - /           : Home route.  Displays a welcome message.  
+    - /hello      : Displays another welcome message.
+    - /capitalize : Displays param in URL in body of HTML as a capitalized word.
+    - /albums     : "Displays three Album objects in body of HTML" 
     
 #### How to **run** Songr:
   1. Clone this repo.
   2. Navigate terminal to repo folder location on local machine.
-  3. Enter *"./gradlew BootRun"*
+  3. Enter *./gradlew BootRun*
   4. Open web browser of choice
-  5. Enter *"http://localhost:8080"*
+  5. Enter *http://localhost:8080*
   6. Visit each page by appending route names above.
 
 ## Challenge
