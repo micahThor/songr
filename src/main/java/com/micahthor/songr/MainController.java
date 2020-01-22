@@ -3,6 +3,7 @@ package com.micahthor.songr;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
@@ -32,9 +33,9 @@ public class MainController {
         return "helloWorld";
     }
 
-    @GetMapping("/capitalize")
-    public String capitalize(@RequestParam(name="name", required=false, defaultValue="No Params in URL!") String wordToUpperCase, Model m) {
-        m.addAttribute("name", wordToUpperCase.toUpperCase());
+    @GetMapping("/capitalize/{wordToUpperCase}")
+    public String capitalize(@PathVariable String wordToUpperCase, Model m) {
+        m.addAttribute("wordToUpperCase", wordToUpperCase.toUpperCase());
         return "capitalized";
     }
 }
