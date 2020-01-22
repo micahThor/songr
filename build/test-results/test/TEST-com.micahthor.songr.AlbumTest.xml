@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.micahthor.songr.AlbumTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-01-21T18:47:23" hostname="38f9d36a23ef.ant.amazon.com" time="0.04">
+<testsuite name="com.micahthor.songr.AlbumTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2020-01-22T00:04:21" hostname="38f9d36a23ef.ant.amazon.com" time="0.038">
   <properties/>
-  <testcase name="testAlbum_Artist()" classname="com.micahthor.songr.AlbumTest" time="0.022"/>
-  <testcase name="testAlbum_SongCount()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
-  <testcase name="testAlbum_Title()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
-  <testcase name="testAlbum_ImgURLString()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
-  <testcase name="testAlbum_SongLength()" classname="com.micahthor.songr.AlbumTest" time="0.002"/>
+  <testcase name="setImageURLString()" classname="com.micahthor.songr.AlbumTest" time="0.02"/>
+  <testcase name="setArtist()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
+  <testcase name="getArtist()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
+  <testcase name="getSongCount()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
+  <testcase name="setLength()" classname="com.micahthor.songr.AlbumTest" time="0.002"/>
+  <testcase name="getImageURLString()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
+  <testcase name="getLength()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
+  <testcase name="setTitle()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
+  <testcase name="setSongCount()" classname="com.micahthor.songr.AlbumTest" time="0.002"/>
+  <testcase name="getTitle()" classname="com.micahthor.songr.AlbumTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,10 +1,13 @@
 package com.micahthor.songr;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.Assert.*;
 
-public class AlbumTest {
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+
+class AlbumTest {
 
     Album rchpAlbum;
 
@@ -19,35 +22,75 @@ public class AlbumTest {
     }
 
     @Test
-    public void testAlbum_Title() {
+    void setTitle() {
+        rchpAlbum.setTitle("bojangles");
+        expectedStr = rchpAlbum.getTitle();
+        actualStr = "bojangles";
+        assertEquals(expectedStr, actualStr);
+    }
+
+    @Test
+    void setArtist() {
+        rchpAlbum.setArtist("bojangles");
+        expectedStr = rchpAlbum.getArtist();
+        actualStr = "bojangles";
+        assertEquals(expectedStr, actualStr);
+    }
+
+    @Test
+    void setSongCount() {
+        rchpAlbum.setSongCount(44);
+        actualInt = rchpAlbum.getSongCount();
+        expectedInt = 44;
+        assertEquals(expectedInt, actualInt);
+    }
+
+    @Test
+    void setLength() {
+        rchpAlbum.setLength(44);
+        actualInt = rchpAlbum.getLength();
+        expectedInt = 44;
+        assertEquals(expectedInt, actualInt);
+    }
+
+    @Test
+    void setImageURLString() {
+        rchpAlbum.setArtist("bojangles");
+        expectedStr = rchpAlbum.getArtist();
+        actualStr = "bojangles";
+        assertEquals(expectedStr, actualStr);
+    }
+
+    @Test
+    void getTitle() {
         expectedStr = "Stadium Arcadium";
         actualStr = rchpAlbum.getTitle();
         assertEquals(expectedStr, actualStr);
     }
 
     @Test
-    public void testAlbum_Artist() {
+    void getArtist() {
         expectedStr = "Red Hot Chili Peppers";
         actualStr = rchpAlbum.getArtist();
         assertEquals(expectedStr, actualStr);
     }
 
     @Test
-    public void testAlbum_SongCount() {
+    void getSongCount() {
         expectedInt = 28;
         actualInt = rchpAlbum.getSongCount();
         assertEquals(expectedInt, actualInt);
     }
 
     @Test
-    public void testAlbum_SongLength() {
+    void getLength() {
         expectedInt = 7347;
         actualInt = rchpAlbum.getLength();
         assertEquals(expectedInt, actualInt);
     }
 
     @Test
-    public void testAlbum_ImgURLString() {
+    void getImageURLString() {
         expectedStr = "https://upload.wikimedia.org/wikipedia/en/e/e6/Stadiumarcadium.jpg";
         actualStr = rchpAlbum.getImageURLString();
         assertEquals(expectedStr, actualStr);
