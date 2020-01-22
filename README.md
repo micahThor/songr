@@ -8,7 +8,7 @@ Project dependencies include *Thymeleaf*, *Spring Web*, and *Spring Devtools*.
      /           : Home route.  Displays a welcome message.  
      /hello      : Displays another welcome message.
      /capitalize : Displays param in URL in body of HTML as a capitalized word.
-     /albums     : "Displays three Album objects in body of HTML" 
+     /albums     : "Contains form to add Albums to database.  Displays Albums saved in database" 
     
 #### How to **run** Songr:
   1. Clone this repo.
@@ -18,7 +18,7 @@ Project dependencies include *Thymeleaf*, *Spring Web*, and *Spring Devtools*.
   5. Enter *http://localhost:8080*
   6. Visit each page by appending route names above.
 
-## Challenge
+## Challenge - LAB 11 : 21 JAN 2020
 <!-- Description of the challenge -->
 1.  Ensure that you can run the Spring app.  
 2.  Create a hello world route at /hello, and ensure that you can visit that route in your browser and see a rendered template come back.  
@@ -27,3 +27,10 @@ Project dependencies include *Thymeleaf*, *Spring Web*, and *Spring Devtools*.
 5.  Create an Album class to act as a model in our app.  
     An Album has a title, an artist, a songCount, a length (in seconds), and an imageUrl that is a link to that album’s art.  
 6.  Create a route at /albums that shows three album instances. (These will be hardcoded for today’s lab; create an array that contains three albums, and then display those three on the page.)   
+
+## Challenge - LAB 12 : 22 JAN 2020  
+1.  Update your Album model so that it can be saved in a database.   
+2.  An Album has a title, an artist, a songCount, a length (in seconds), and an imageUrl that is a link to that album’s art.  
+3.  A user should be able to see information about all the albums on the site.  
+4.  A user should be able to add albums to the site.  
+
