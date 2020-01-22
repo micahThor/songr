@@ -1,13 +1,35 @@
 package com.micahthor.songr;
 
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Album {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    long id;
 
     private String title;
     private String artist;
     private int songCount;
     private int length;
     private String imageURLString;
+
+    public Album(String title, String artist, int songCount, int length, String imageURLString) {
+        this.title = title;
+        this.artist = artist;
+        this.songCount = songCount;
+        this.length = length;
+        this.imageURLString = imageURLString;
+    }
+
+    public Album() {
+
+    }
 
     public void setTitle(String title) {
         this.title = title;
@@ -26,14 +48,6 @@ public class Album {
     }
 
     public void setImageURLString(String imageURLString) {
-        this.imageURLString = imageURLString;
-    }
-
-    public Album(String title, String artist, int songCount, int length, String imageURLString) {
-        this.title = title;
-        this.artist = artist;
-        this.songCount = songCount;
-        this.length = length;
         this.imageURLString = imageURLString;
     }
 
