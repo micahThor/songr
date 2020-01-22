@@ -55,8 +55,8 @@ class AlbumTest {
 
     @Test
     void setImageURLString() {
-        rchpAlbum.setArtist("bojangles");
-        expectedStr = rchpAlbum.getArtist();
+        rchpAlbum.setImageURLString("bojangles");
+        expectedStr = rchpAlbum.getImageURLString();
         actualStr = "bojangles";
         assertEquals(expectedStr, actualStr);
     }
