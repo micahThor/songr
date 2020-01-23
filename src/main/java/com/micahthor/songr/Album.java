@@ -1,10 +1,9 @@
 package com.micahthor.songr;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -12,6 +11,9 @@ public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
+
+    @OneToMany(mappedBy = "album")
+    public List<Song> songs;
 
     private String title;
     private String artist;
@@ -49,6 +51,10 @@ public class Album {
 
     public void setImageURLString(String imageURLString) {
         this.imageURLString = imageURLString;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getTitle() {

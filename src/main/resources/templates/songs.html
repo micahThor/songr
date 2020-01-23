@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Songs By Album</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+<a href="/albums"><h2>Return to Albums</h2></a>
+    <div id="albums">
+        <li>
+            <p>Artist:              <span th:text="${album.artist}"></span></p>
+            <p>Title:               <span th:text="${album.title}"></span></p>
+            <p>Number of Songs:     <span th:text="${album.songCount}"></span></p>
+            <p>Length (in seconds): <span th:text="${album.length}"></span></p>
+            <img th:src="${album.imageURLString}"></img>
+        </li>
+    </div>
+
+    <h2>Songs</h2>
+    <div id="songs">
+        <ul>
+            <li th:each="song : ${songList}">
+                <p>Song Name:           <span th:text="${song.title}"></span></p>
+                <p>Length (in seconds): <span th:text="${song.length}"></span></p>
+                <p>Track Number:        <span th:text="${song.trackNumber}"></span></p>
+            </li>
+        </ul>
+    </div>
+
+    <form th:action="'/albums/' + ${album.id}" method="POST">
+        <hr>
+        <h2>Add a Song to the Album</h2>
+        <hr>
+        <p>Song Name:               <input type="text" name="title"></p>
+        <p>Length (in seconds): <input type="number" name="length"></p>
+        <p>Track Number:        <input type="number" name="trackNumber"></p>
+        <input type="submit">
+    </form>
+
+
+</body>
+</html>
