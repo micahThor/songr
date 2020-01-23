@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SongR Songs</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h2>Songs</h2>
+    <a href="/albums"><h2>Return to Albums</h2></a>
+    <div id="songs">
+        <ul>
+            <li th:each="song : ${songList}">
+                <p>Song Name:           <span th:text="${song.title}"></span></p>
+                <p>Length (in seconds): <span th:text="${song.length}"></span></p>
+                <p>Track Number:        <span th:text="${song.trackNumber}"></span></p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

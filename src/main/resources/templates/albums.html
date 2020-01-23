@@ -7,31 +7,35 @@
     <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
-<form action="/albums" method="POST">
+
     <hr>
-    <h2>Add a New Album</h2>
+    <h2>SongR Albums</h2>
+    <h2>Click on Album Art to Learn More!</h2>
+    <a href="/allsongs"><h2>Click To View All SongR Songs</h2></a>
     <hr>
-    <p>Artist:           <input type="text" name="artist"></p>
-    <p>Title:            <input type="text" name="title"></p>
-    <p>Number of Songs:  <input type="number" name="songCount"></p>
-    <p>Length (in seconds): <input type="number" name="length"></p>
-    <p>Album Cover Art:  <input type="text" name="imageURLString"></p>
-    <input type="submit">
-</form>
-<hr>
-<h2>Your Albums</h2>
-<hr>
-<div id="albums">
-    <ul>
-        <li th:each="album : ${albumList}">
-            <p>Artist:           <span th:text="${album.artist}"></span></p>
-            <p>Title:            <span th:text="${album.title}"></span></p>
-            <p>Number of Songs:  <span th:text="${album.songCount}"></span></p>
-            <p>Length (in seconds): <span th:text="${album.length}"></span></p>
-            <img th:src="${album.imageURLString}"></img>
-        </li>
-    </ul>
-</div>
+    <div id="albums">
+        <ul>
+            <li th:each="album : ${albumList}">
+                <p>Artist:              <span th:text="${album.artist}"></span></p>
+                <p>Title:               <span th:text="${album.title}"></span></p>
+                <p>Number of Songs:     <span th:text="${album.songCount}"></span></p>
+                <p>Length (in seconds): <span th:text="${album.length}"></span></p>
+                <a th:href="'/albums/' + ${album.id}"><img th:src="${album.imageURLString}"></img></a>
+            </li>
+        </ul>
+    </div>
+
+    <form action="/albums" method="POST">
+        <hr>
+        <h2>Add a New Album to SongR</h2>
+        <hr>
+        <p>Artist:              <input type="text" name="artist"></p>
+        <p>Title:               <input type="text" name="title"></p>
+        <p>Number of Songs:     <input type="number" name="songCount"></p>
+        <p>Length (in seconds): <input type="number" name="length"></p>
+        <p>Album Cover Art:     <input type="text" name="imageURLString"></p>
+        <input type="submit">
+    </form>
 
 </body>
 </html>
